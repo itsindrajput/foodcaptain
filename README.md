@@ -1,6 +1,6 @@
-# FoodStuff
+# FoodCaptain
 
-FoodStuff is a full-stack food ordering application built using the MERN stack (MongoDB, Express, React, Node.js).
+FoodCaptain is a full-stack food ordering application built using the MERN stack (MongoDB, Express, React, Node.js).
 
 ## Features
 
@@ -17,7 +17,7 @@ FoodStuff is a full-stack food ordering application built using the MERN stack (
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/itsindrajput/foodstuff.git`
+1. Clone the repository: `git clone https://github.com/itsindrajput/Foodcaptain.git`
 2. Install dependencies:
    - For backend: `npm install`
    - For frontend: `cd client && npm install`
