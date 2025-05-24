@@ -17,7 +17,8 @@ FoodCaptain is a robust, full-stack food ordering platform developed using the M
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/itsindrajput/Foodcaptain.git`
+1. Clone the repository:
+   `git clone https://github.com/itsindrajput/Foodcaptain.git`
 2. Install dependencies:
    - For backend: `npm install`
    - For frontend: `cd client && npm install`
