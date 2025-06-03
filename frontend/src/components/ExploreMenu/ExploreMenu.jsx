@@ -9,7 +9,7 @@ const ExploreMenu = ({ category, setCategory }) => {
       <p className="explore-menu-text">
         Choose from a diverse menu featuring a delectable array of dishes. Our
         mission is to satisfy your cravings and elevate your dining experience,
-        one delicious meal at a time.
+        one delicious meal at a time. Tap. Order. Enjoy.
       </p>
       <div className="explore-menu-list">
         {menu_list.map((item, index) => {
