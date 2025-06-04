@@ -81,10 +81,3 @@ const removeFood = async (req, res) => {
 
 
 export {  addFood, listFood,  removeFood }
-
-
-
-
-
-
-
