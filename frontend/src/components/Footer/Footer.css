@@ -1,3 +1,13 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
 .footer {
   color: #d9d9d9;
   background-color: #323232;

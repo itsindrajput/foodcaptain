@@ -201,4 +201,8 @@
   .search-icon {
     display: none !important;
   }
+  .navbar-right {
+    gap: 15px;
+    margin-left: auto;
+  }
 }

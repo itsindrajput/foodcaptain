@@ -3,18 +3,18 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <div className="header">
+    <header className="header">
+      <div className="header-overlay"></div>
       <div className="header-contents">
         <h2>Food Captain – Where Taste Meets Speed!</h2>
         <p>
-          We believe great food starts with great ingredients. That’s why our
-          curated menu features chef-inspired dishes made with fresh, handpicked
-          produce and bold flavors — designed to delight every palate. Your
-          Meal, Our Mission.
+          We believe great food starts with quality ingredients. Enjoy our
+          fresh, chef-crafted meals with fast delivery, easy ordering, and
+          amazing taste — every single time. Your Meal, Our Mission.
         </p>
         <button>Explore Menu</button>
       </div>
-    </div>
+    </header>
   );
 };
 

@@ -61,7 +61,7 @@ import bag_icon from "./bag_icon.png";
 import logout_icon from "./logout_icon.png";
 import parcel_icon from "./parcel_icon.png";
 
-import mobile_app from "./mobile_app.png"
+import mobile_app from "./mobile_app.png";
 
 export const assets = {
   logo,
