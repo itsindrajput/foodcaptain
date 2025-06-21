@@ -61,6 +61,8 @@ import bag_icon from "./bag_icon.png";
 import logout_icon from "./logout_icon.png";
 import parcel_icon from "./parcel_icon.png";
 
+import mobile_app from "./mobile_app.png"
+
 export const assets = {
   logo,
   logof,
@@ -73,6 +75,7 @@ export const assets = {
   remove_icon_red,
   app_store,
   play_store,
+  mobile_app,
   linkedin_icon,
   facebook_icon,
   twitter_icon,

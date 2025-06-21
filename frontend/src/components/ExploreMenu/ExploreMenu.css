@@ -5,13 +5,14 @@
 }
 
 .explore-menu h1 {
-  color: #262626;
-  font-weight: 500;
+  color: #2c2c2c;
+  font-weight: 600;
 }
 
 .explore-menu-text {
-  max-width: 60%;
-  color: #808080;
+  max-width: 80%;
+  color: #2a2929;
+  margin-top: -10px;
 }
 .explore-menu-list {
   display: flex;
