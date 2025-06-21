@@ -4,46 +4,46 @@ import { assets } from "../../assets/assets";
 
 const Footer = () => {
   return (
-    <div className="footer" id="footer">
+    <footer className="footer" id="footer">
       <div className="footer-content">
-        <div className="footer-content-left">
-          <img src={assets.logof} alt="Food Captain" />
+        <div className="footer-left">
+          <img src={assets.logof} alt="Food Captain" className="footer-logo" />
           <p>
-            Food Captain is the perfect platform for quick, reliable food
-            ordering and delivery! Designed to connect food lovers with their
-            favorite local restaurants. Discover various types of cuisines,
-            easily customize your orders, and enjoy helpful search tools and
-            tailored suggestions. Our simple interface allows you to smoothly
-            explore menus, make orders, and monitor your delivery.
+            Food Captain connects food lovers with their favorite restaurants
+            for quick and easy delivery. Explore a variety of cuisines,
+            customize your orders, and enjoy a smooth ordering experience from
+            start to finish.
           </p>
         </div>
-        <div className="footer-content-center">
-          <h2>COMPANY</h2>
+
+        <div className="footer-links">
+          <h3>Company</h3>
           <ul>
             <li>Home</li>
-            <li>About us</li>
+            <li>About Us</li>
             <li>Delivery</li>
-            <li>Privacy policy</li>
+            <li>Privacy Policy</li>
           </ul>
         </div>
-        <div className="footer-content-right">
-          <h2>GET IN TOUCH</h2>
+
+        <div className="footer-contact">
+          <h3>Get in Touch</h3>
           <ul>
-            <li>+91-8382022356</li>
-            <li>foodcaptain@gmail.com</li>
-            <div className="footer-social-icons">
-              <img src={assets.facebook_icon} alt="" />
-              <img src={assets.twitter_icon} alt="" />
-              <img src={assets.linkedin_icon} alt="" />
-            </div>
+            <li>📞 +91-8382022356</li>
+            <li>📧 foodcaptain@gmail.com</li>
           </ul>
+          <div className="footer-social">
+            <img src={assets.facebook_icon} alt="Facebook" />
+            <img src={assets.twitter_icon} alt="Twitter" />
+            <img src={assets.linkedin_icon} alt="LinkedIn" />
+          </div>
         </div>
       </div>
+
       <hr />
-      <p className="footer-copyright">
-        Copyright 2024 © Food Captain. All Right Reserved.
-      </p>
-    </div>
+
+      <p className="footer-bottom">© 2024 Food Captain. All rights reserved.</p>
+    </footer>
   );
 };
 
