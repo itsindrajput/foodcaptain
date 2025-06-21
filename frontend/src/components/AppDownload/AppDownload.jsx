@@ -7,7 +7,7 @@ const AppDownload = () => {
     <section className="app-download" id="app-download">
       <div className="app-download-content">
         <div className="app-download-text">
-          <h2>Get The Food Captain App</h2>
+          <h2>Get The App Today!</h2>
           <p>
             Discover variety of tasty dishes made to satisfy your cravings and
             make every meal special. Download the app now and enjoy exclusive
