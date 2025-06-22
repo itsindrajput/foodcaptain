@@ -12,7 +12,17 @@ const Header = () => {
           fresh, chef-crafted meals with fast delivery, easy ordering, and
           amazing taste — every single time. Your Meal, Our Mission.
         </p>
-        <button>Explore Menu</button>
+        <button
+          onClick={() => {
+            const element = document.getElementById("explore-menu");
+            if (element) {
+              element.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+        >
+          {" "}
+          Explore Menu{" "}
+        </button>
       </div>
     </header>
   );
