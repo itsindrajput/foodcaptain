@@ -40,3 +40,8 @@ FoodCaptain is a robust, full-stack food ordering platform developed using the M
 ## Conclusion
 
 This project demonstrates a full-stack development workflow using the MERN stack, highlighting key skills such as RESTful API design, JWT-based authentication, state management, and responsive UI development. FoodCaptain serves as a practical example of building scalable and secure web applications with an emphasis on user experience and efficient data handling.
+
+## 📽️ Project Walkthrough Video
+
+To get a complete overview of how FoodCaptain works — from browsing food items to placing an order — check out the full walkthrough video below:
+https://github.com/user-attachments/assets/19e9c707-858b-4ab0-9574-c1213c693291
