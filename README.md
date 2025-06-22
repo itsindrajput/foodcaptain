@@ -43,5 +43,6 @@ This project demonstrates a full-stack development workflow using the MERN stack
 
 ## 📽️ Project Walkthrough Video
 
-To get a complete overview of how FoodCaptain works — from browsing food items to placing an order — check out the full walkthrough video below:
-https://github.com/user-attachments/assets/19e9c707-858b-4ab0-9574-c1213c693291
+To get a complete overview of how Food Captain works — from browsing food items to placing an order — check out the full walkthrough video link below:
+
+- https://drive.google.com/file/d/12xo-_Ib90hjHpFxO0PQ7cEiYakoMCXSi/view?usp=sharing
