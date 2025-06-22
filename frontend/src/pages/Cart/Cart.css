@@ -1,5 +1,5 @@
 .cart {
-  margin: 30px auto;
+  margin: 50px auto;
   padding: 0 6vw;
 }
 
@@ -14,15 +14,15 @@
   display: grid;
   grid-template-columns: 1fr 2fr 1fr 1fr 1fr 0.5fr;
   align-items: center;
-  color: #666;
   font-size: 14px;
   font-weight: 600;
   padding: 10px 0;
+  color: #666;
 }
 
 .cart-items-item {
-  color: #222;
   font-weight: 500;
+  color: #222;
 }
 
 .cart-items-item img {
@@ -35,6 +35,7 @@
   color: red;
   font-size: 18px;
   font-weight: bold;
+  user-select: none;
 }
 
 .cart-bottom {
@@ -51,11 +52,10 @@
   min-width: 280px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 .cart-total h2 {
-  margin-bottom: 10px;
   font-size: 22px;
   color: #333;
 }
@@ -68,8 +68,8 @@
 }
 
 .cart-total-details.total-bold {
-  font-size: 16px;
   font-weight: 600;
+  font-size: 16px;
 }
 
 .cart-total button {
@@ -81,7 +81,7 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s ease;
 }
 
 .cart-total button:hover {
@@ -122,14 +122,85 @@
   padding: 12px 16px;
   cursor: pointer;
   font-size: 14px;
-  transition: 0.3s;
+  transition: background 0.3s;
 }
 
 .cart-promocode-input button:hover {
   background-color: #333;
 }
 
+.cart-suggestion {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #d3fae066;
+  border: 1px outset #a2a5a366;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(255, 194, 160, 0.2);
+}
+
+.cart-suggestion h4 {
+  margin-bottom: 10px;
+  color: #ff4c24;
+}
+
+.suggestion-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.suggestion-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.suggestion-card h5 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.suggestion-card p {
+  margin: 4px 0;
+  font-weight: bold;
+}
+
+.suggestion-card button {
+  background-color: #ff4c24;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.suggestion-card button:hover {
+  background-color: #e24320;
+}
+
+.cart-delivery-estimate {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #d3fae0;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px outset #797a7966;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #444;
+}
+
 @media (max-width: 768px) {
+  .cart {
+    margin: 30px auto;
+    padding: 0 5vw;
+  }
+
   .cart-items-title {
     grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
     font-size: 12px;

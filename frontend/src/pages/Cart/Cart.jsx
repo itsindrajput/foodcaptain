@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Cart.css";
 import { StoreContext } from "../../Context/StoreContext";
 import { useNavigate } from "react-router-dom";
@@ -7,6 +7,19 @@ const Cart = () => {
   const { cartItems, food_list, removeFromCart, getTotalCartAmount, url } =
     useContext(StoreContext);
   const navigate = useNavigate();
+
+  const deliveryFee = getTotalCartAmount() === 0 ? 0 : 2;
+  const finalTotal = getTotalCartAmount() + deliveryFee;
+
+  const [suggestedItem, setSuggestedItem] = useState(null);
+
+  useEffect(() => {
+    const availableItems = food_list.filter((item) => !cartItems[item._id]);
+    if (availableItems.length > 0) {
+      const random = Math.floor(Math.random() * availableItems.length);
+      setSuggestedItem(availableItems[random]);
+    }
+  }, [cartItems, food_list]);
 
   return (
     <div className="cart">
@@ -20,23 +33,24 @@ const Cart = () => {
           <p>Remove</p>
         </div>
         <hr />
-        {food_list.map((item) => {
-          if (cartItems[item._id] > 0) {
-            return (
-              <div className="cart-items-title cart-items-item" key={item._id}>
-                <img src={`${url}/images/${item.image}`} alt={item.name} />
-                <p>{item.name}</p>
-                <p>${item.price}</p>
-                <p>{cartItems[item._id]}</p>
-                <p>${item.price * cartItems[item._id]}</p>
-                <p onClick={() => removeFromCart(item._id)} className="cross">
-                  ×
-                </p>
-              </div>
-            );
-          }
-          return null;
-        })}
+        {food_list.map((item) =>
+          cartItems[item._id] > 0 ? (
+            <div className="cart-items-title cart-items-item" key={item._id}>
+              <img src={`${url}/images/${item.image}`} alt={item.name} />
+              <p>{item.name}</p>
+              <p>${item.price}</p>
+              <p>{cartItems[item._id]}</p>
+              <p>${item.price * cartItems[item._id]}</p>
+              <p
+                onClick={() => removeFromCart(item._id)}
+                className="cross"
+                title="Remove"
+              >
+                ×
+              </p>
+            </div>
+          ) : null
+        )}
       </div>
 
       <div className="cart-bottom">
@@ -49,12 +63,12 @@ const Cart = () => {
           <hr />
           <div className="cart-total-details">
             <p>Delivery Fee</p>
-            <p>${getTotalCartAmount() === 0 ? 0 : 2}</p>
+            <p>${deliveryFee}</p>
           </div>
           <hr />
           <div className="cart-total-details total-bold">
             <b>Total</b>
-            <b>${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}</b>
+            <b>${finalTotal}</b>
           </div>
           <button onClick={() => navigate("/order")}>
             Proceed to Checkout
@@ -62,11 +76,34 @@ const Cart = () => {
         </div>
 
         <div className="cart-promocode">
-          <p>If You Have A Promo Code, Enter It Below.</p>
+          <p>If you have a promo code, enter it below:</p>
           <div className="cart-promocode-input">
             <input type="text" placeholder="Promo code" />
             <button>Apply</button>
           </div>
+
+          <div className="cart-delivery-estimate">
+            <p>
+              ⏱️ Estimated Delivery: <strong>30–45 mins</strong>
+            </p>
+          </div>
+
+          {suggestedItem && (
+            <div className="cart-suggestion">
+              <h4>👩🏻‍🍳 Chef’s Special Suggestion!</h4>
+              <div className="suggestion-card">
+                <img
+                  src={`${url}/images/${suggestedItem.image}`}
+                  alt={suggestedItem.name}
+                />
+                <div>
+                  <h5>{suggestedItem.name}</h5>
+                  <p>${suggestedItem.price}</p>
+                  <button onClick={() => navigate("/")}>View Item</button>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

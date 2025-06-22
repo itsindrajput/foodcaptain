@@ -1,5 +1,6 @@
 .my-orders {
-  margin: 60px auto;
+  margin: 40px auto;
+  margin-bottom: 60px;
   padding: 0 6vw;
   max-width: 1200px;
 }
