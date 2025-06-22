@@ -45,4 +45,4 @@ This project demonstrates a full-stack development workflow using the MERN stack
 
 To get a complete overview of how Food Captain works — from browsing food items to placing an order — check out the full walkthrough video link below:
 
-- https://drive.google.com/file/d/12xo-_Ib90hjHpFxO0PQ7cEiYakoMCXSi/view?usp=sharing
+- https://drive.google.com/file/d/15lcT2fOUZDxHzsO-wX63O8h1xnLw52Ql/view?usp=sharing
