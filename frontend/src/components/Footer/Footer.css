@@ -14,7 +14,7 @@ body,
   padding: 60px 8vw 30px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 25px;
 }
 
 .footer-content {

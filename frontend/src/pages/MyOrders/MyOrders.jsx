@@ -6,7 +6,7 @@ import { assets } from "../../assets/assets";
 
 const MyOrders = () => {
   const [data, setData] = useState([]);
-  const { url, token, currency } = useContext(StoreContext);
+  const { url, token } = useContext(StoreContext);
 
   const fetchOrders = async () => {
     const response = await axios.post(
@@ -26,29 +26,37 @@ const MyOrders = () => {
   return (
     <div className="my-orders">
       <h2>My Orders</h2>
-      <div className="container">
-        {data.map((order, index) => {
-          return (
-            <div key={index} className="my-orders-order">
-              <img src={assets.parcel_icon} alt="" />
-              <p>
-                {order.items.map((item, index) => {
-                  if (index === order.items.length - 1) {
-                    return item.name + " x " + item.quantity;
-                  } else {
-                    return item.name + " x " + item.quantity + ",";
-                  }
-                })}
+      <div className="orders-container">
+        {data.map((order, index) => (
+          <div key={index} className="order-card">
+            <div className="order-icon">
+              <img src={assets.parcel_icon} alt="Parcel" />
+            </div>
+
+            <div className="order-details">
+              <p className="order-items">
+                {order.items
+                  .map((item) => `${item.name} x${item.quantity}`)
+                  .join(", ")}
               </p>
-              <p>${order.amount}.00</p>
-              <p>Items: {order.items.length}</p>
-              <p>
-                <span>&#x25cf;</span> <b>{order.status}</b>
-              </p>
+              <div className="order-meta">
+                <p>
+                  <strong>Items:</strong> {order.items.length}
+                </p>
+                <p>
+                  <strong>Amount:</strong> ${order.amount}.00
+                </p>
+                <p className={`order-status ${order.status.toLowerCase()}`}>
+                  <span>&#x25cf;</span> {order.status}
+                </p>
+              </div>
+            </div>
+
+            <div className="order-actions">
               <button onClick={fetchOrders}>Track Order</button>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </div>
   );
